@@ -15,7 +15,6 @@ h2 {
   line-height: 28px;
   font-family: 'Libre Baskerville', serif;
   text-transform: uppercase;
-
   font-weight: normal;
 }
 
@@ -135,7 +134,7 @@ a:hover {
 .header-text h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 7px;
   text-transform: uppercase;
 }
 
