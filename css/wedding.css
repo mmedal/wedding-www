@@ -199,7 +199,6 @@ h2.section-header:after {
 
 .event {
   text-align: center;
-  /*padding: 0 25px;*/
 }
 
 .event p {
@@ -442,6 +441,12 @@ h2.section-header:after {
 @media (max-width: 1024px) {
   #header {
     height: 675px;
+  }
+}
+
+@media (min-width: 768px) {
+  #events {
+    padding: 80px 75px 80px 75px;
   }
 }
 
