@@ -1,0 +1,22 @@
+{
+  "name": "wedding-www",
+  "description": "Matt Medal's wedding website.",
+  "author": "Matthew Medal",
+  "license": "MIT",
+  "repository": "git@github.com:mmedal/wedding-www.git",
+  "homepage": "https://www.medalreyes.com",
+  "scripts": {
+    "develop": "nodemon --ext html,css --ignore build/ --exec 'yarn run build && yarn run serve'",
+    "serve": "http-server build/ -p ${PORT:-3000} -c 0",
+    "build": "./build.sh",
+    "deploy": "yarn run build && push-dir --dir build --branch gh-pages --cleanup"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^4.0.12",
+    "git-credential-env": "^1.0.0",
+    "html-minifier": "^3.4.3",
+    "http-server": "^0.9.0",
+    "nodemon": "^1.11.0",
+    "push-dir": "^0.4.1"
+  }
+}

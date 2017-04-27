@@ -45,7 +45,7 @@ a:hover {
   height: 780px;
   margin: 0 auto;
   background-color: #9caf8f;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/scu-mission.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/scu-mission.jpg);
   background-repeat: no-repeat;
   background-position: 50% 0;
   -webkit-background-size: cover;
