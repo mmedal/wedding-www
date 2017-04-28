@@ -3,7 +3,7 @@
 [![build-status][build-status-badge]][build-status-href]
 
 
-Matt Medal's wedding website. https://www.medalreyes.com
+Matt Medal's (& Keilah Reyes') wedding website. https://www.medalreyes.com
 
 
 [build-status-badge]: https://img.shields.io/travis/mmedal/wedding-www/master.svg?style=flat-square
