@@ -9,7 +9,7 @@
     "develop": "nodemon --ext html,css --ignore build/ --exec 'yarn run build && yarn run serve'",
     "serve": "http-server build/ -p ${PORT:-3000} -c 0",
     "build": "./build.sh",
-    "deploy": "yarn run build && push-dir --dir build --branch gh-pages --cleanup"
+    "deploy": "yarn run build && push-dir --verbose --dir build --branch gh-pages --cleanup"
   },
   "devDependencies": {
     "clean-css-cli": "^4.0.12",

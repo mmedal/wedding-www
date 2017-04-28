@@ -6,10 +6,11 @@ branches:
     - master
 env:
   global:
-    - secure: "eYF2D700/xvM8WSaN8RfgTYraCWTxRZ5CQZSDxy1zh5x4NGH6TODUBUIpoSRZOxU1oy1jM3VDZJo7w5xIpNJAQup3yMHmzaDi7uOe/kkXyReeP0Z9zAztSTocitXkKix9C0CFExFGd2ojI4SzxWxvsVB76OyL0W4Q03OZRB6Vllj3QpmkcZ0xHYoXeJBZWDy44WOOn113ins+Vr40Sm6AZ+yUZD8rWMaeQiBj3q9mqPQaaqeLrQkIWVQRtE6CfWpGlBNYw53HJ8cTOsfrdBsavz+URtfD18hOIAKFDuaTooOb9CKNn1SHn4lBDGhtZROiU2lr7qHC2mLOkKgqtbAuvKLWun0vPIy2uMjQPlT+WRlk/wRfRGMeQujUWutaQpOX8YauvoEVzMtwMV/ZsREgjI0wtNru35TSmvDgtQklAReqCyO9i5kpSS2nXej3lbkwQ7wMFU1wBDbHs1sMHvQ0tuN39Fwvm0XTDzYROeqSivKAZYIUrD3Ft1hm598Nis3p4EptzNfGpNUVVjdO0wXdueknmYsKCowsQX8jGvmqo9mo1/9IunpsLPjB+2OEa60Uy5o7nyCsUnbXBqX/9yycOXUao/0o/9LjtFBbFrtcYfubKeffzsu6XfaO3dT7L7naTovueYugD+kvMOhty2GJzG9fYEuCuBUk1p+tTOVkuk="
+    - secure: "dC6m+0cx5uUkX4l89kPiDDRVAqFMeD7/UOdlp29B75Y7wCLac+bu2vobpXd2lJj1WCTWC3FIKHKGFmNxsoxV1W0krZJxq9CXjVncgoShSpF6UfXIb7iJYAnOw8jtf2YZT85zOukbo85we7F+G+bDq7C0/pH0j1vfCXbsWwU45bgAWd3kxuCOTOhcrZDN6ajpUGAhFqtj05Y5g9YH/0RNCC/RcRD4uka9h3rGgXnG9NhrGAuFR2S6FQwt4C7JrS1mX9SKkJZg8Rxqrn5g+ejusKV/18zqIZY8/mcBZ6GxGuLb9NshEDOsjWWcCxaJ9LVQgWQntT8TQG90CzKCu9RS2+i76oMH3sJ/ofQwDbLU85ioMx7aCA3J7dfYsjOK4wmklKT81T6DxYzEcuNd+uSfUwSkcJYCsXzMH04ogyCymIcvTm2GcA3C/Uc2sY2zfFLk5b4NWVfFQAicNlr8e2QoqsAj6mHIGZ+0pwClrrag4X1VimkDI3fx2NGDRoHFKXk1pWF/L9WVURxJIshTLb6I5fa0upDuGNiXIvwGBUM/nDhasplCVasSvr8ilChdv7VlmvqVmuFMtFQddUPuzEL+6KsGsas/Wd+WWAnaYcElj0/qCOR/ffzX2rPDkdqePirU5mPQJTTntKBBRW1sIXSCQOV6QaQT5GwT8Rx2mSRX6+g="
 
 script:
   - yarn global add git-credential-env
-  - git config credential.helper "env --username=GITHUB_TOKEN"
+  - git config credential.helper "env --username=TRAVIS_GITHUB_TOKEN"
   - git config user.name "Travis CI"
+  - git config user.email "builds@travis-ci.org"
   - yarn run deploy
