@@ -93,13 +93,13 @@ a:hover {
 /* xs < 768 */
 @media screen and (max-width: 767px) {
   .header-text h1 {
-    font-size: 30px;
+    font-size: 34px;
     margin-top: -12px;
     letter-spacing: 7px;
   }
 
   .header-text p {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
