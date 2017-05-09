@@ -344,10 +344,6 @@ h2.section-header:after {
   width: 140px;
 }
 
-.macys {
-  width: 160px;
-}
-
 /* RSVP
 -------------------------------------------------- */
 #rsvp {
@@ -535,10 +531,6 @@ h2.section-header:after {
 
   .amzn {
     margin-top: 80px;
-  }
-
-  .macys {
-    margin-top: 60px;
   }
 
 }
