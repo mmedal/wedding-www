@@ -1,3 +1,7 @@
-/**
- * Created by mmedal on 5/9/17.
- */
+
+
+const hello = () => {
+  console.log('hello matthew');
+};
+
+module.exports = { hello };

@@ -3,20 +3,25 @@
   "description": "Matt Medal's wedding website.",
   "author": "Matthew Medal",
   "license": "MIT",
+  "private": true,
   "repository": "git@github.com:mmedal/wedding-www.git",
   "homepage": "https://www.medalreyes.com",
   "scripts": {
-    "develop": "nodemon --ext html,css --ignore build/ --exec 'yarn run build && yarn run serve'",
+    "develop": "nodemon --ext html,css,js --ignore build/ --exec 'yarn run build && yarn run serve'",
     "serve": "http-server build/ -p ${PORT:-3000} -c 0",
     "build": "./build.sh",
     "deploy": "yarn run build && push-dir --verbose --dir build --branch gh-pages --cleanup"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
     "clean-css-cli": "^4.0.12",
     "git-credential-env": "^1.0.0",
     "html-minifier": "^3.4.3",
     "http-server": "^0.9.0",
     "nodemon": "^1.11.0",
-    "push-dir": "^0.4.1"
+    "push-dir": "^0.4.1",
+    "uglifyjs": "^2.4.10"
   }
 }

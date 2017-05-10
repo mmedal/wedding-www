@@ -13,6 +13,10 @@ html-minifier -o build/index.html --remove-tag-whitespace --remove-comments --co
 # minimize css
 cleancss -02 -o build/app.css css/bootstrap.css css/bootstrap-grid.css css/animate.css css/wedding.css css/icon.css
 
+# build and minimize js
+browserify js/* -o build/app.js -t [ babelify --presets [ env ] ]
+uglifyjs build/app.js -o build/app.js -c -m
+
 # copy other files
 cp CNAME build/
 # cp img/favicon-196x196.png build/
