@@ -1261,6 +1261,10 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+form-serialize@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/form-serialize/-/form-serialize-0.7.1.tgz#48f74e37d041de4f7d140dd2c54b37fff8d2e843"
+
 from@~0:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/from/-/from-0.1.7.tgz#83c60afc58b9c56997007ed1a768b3ab303a44fe"

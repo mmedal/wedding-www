@@ -355,8 +355,8 @@ h2.section-header:after {
   text-align: center;
 }
 
-#rsvp .answer {
-  padding-top: 40px;
+#rsvp .form-body {
+  padding-top: 15px;
 }
 
 #rsvp .myform {
@@ -364,12 +364,16 @@ h2.section-header:after {
   margin: 0 auto;
 }
 
-#rsvp label.two {
-  padding: 15px 0 4px 0;
+#rsvp .alert {
+  margin-bottom: 33px;
 }
 
-#rsvp label.three {
-  padding: 30px 0 4px 0;
+#rsvp label.supplementary-label {
+  padding: 15px 0 0 0;
+}
+
+#rsvp label.supplementary-label-1 {
+  margin-top: 35px;
 }
 
 #rsvp input[type="text"] {
@@ -391,24 +395,20 @@ h2.section-header:after {
   outline: 0 !important;
 }
 
-#rsvp ul {
-  margin-left: -13px;
-  margin-bottom: 20px;
-}
-
-#rsvp ul li {
-  list-style: none;
-  margin-top: 5px;
-  margin-left: 10px;
-  display: inline;
-}
-
 #rsvp .radio {
   margin: -5px 5px 0 2px;
 }
 
 #rsvp .radio:last-child {
   margin: -5px 5px 0 15px;
+}
+
+#rsvp .checkbox-p {
+  margin: 0 0;
+}
+
+#rsvp .checkbox {
+  margin: 0 5px 0 2px;
 }
 
 #rsvp .submit-button {
@@ -428,7 +428,11 @@ h2.section-header:after {
   transition: all .2s linear;
 }
 
-#rsvp .submit-button:hover {
+#rsvp .submit-button:hover:disabled {
+  cursor: not-allowed;
+}
+
+#rsvp .submit-button:hover:enabled{
   background-color: #7c8f6f;
   cursor: pointer;
   color: #fff;
@@ -507,19 +511,6 @@ h2.section-header:after {
     padding-bottom: 15px;
     padding-right: 0;
     display: block;
-  }
-
-  .hotels .answer h4 {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .hotels .question {
-    cursor: pointer;
-  }
-
-  .hotels .question:hover {
-    color: #5a5a5a;
   }
 
   .registry {

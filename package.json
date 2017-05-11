@@ -23,5 +23,8 @@
     "nodemon": "^1.11.0",
     "push-dir": "^0.4.1",
     "uglifyjs": "^2.4.10"
+  },
+  "dependencies": {
+    "form-serialize": "^0.7.1"
   }
 }

@@ -11,8 +11,6 @@
 
   <link href="app.css" rel="stylesheet">
 
-  <script type="text/javascript" src="app.js"></script>
-
   <link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic' rel='stylesheet' type='text/css'>
@@ -166,22 +164,23 @@
   <!-- RSVP
   ================================================== -->
   <section id="rsvp">
-    <h2 class="section-header question">RSVP</h2>
+    <h2 class="section-header">RSVP</h2>
 
-    <div class="answer">
+    <div class="form-body">
       <div class="myform add-pad">
-        <form id="form" action="" method="POST" data-validate="parsley">
+        <form id="rsvp-form">
+          <div id="rsvp-form-entries">
+            <label>Will you be attending the wedding &amp; reception?</label>
+            <p>
+              <input type="radio" value="Yes" name="attending" class="radio">Yes
+              <input type="radio" value="No" name="attending" class="radio">No
+            </p>
 
-          <label class="one">Will you be attending the wedding &amp; reception?</label>
-          <p>
-            <input type="radio" value="Yes" name="attending" class="radio">Yes
-            <input type="radio" value="No" name="attending" class="radio">No
-          </p>
+            <label class="supplementary-label">Your full name:</label>
+            <input type="text" data-required="true" name="name">
+          </div>
 
-          <label class="two">Your name:</label>
-          <input type="text" data-required="true" name="name">
-
-          <button type="submit" value="Send" class="submit-button">Send</button>
+          <button id="rsvp-submit" type="submit" value="Submit" class="submit-button" disabled>Submit</button>
 
         </form>
       </div>
@@ -189,6 +188,8 @@
   </section>
 
 </div>
+
+<script type="text/javascript" src="app.js"></script>
 
 </body>
 
