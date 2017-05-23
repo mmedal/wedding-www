@@ -8,7 +8,7 @@
   "homepage": "https://www.medalreyes.com",
   "scripts": {
     "develop": "nodemon --ext html,css,js --ignore build/ --exec 'yarn run build && yarn run serve'",
-    "serve": "http-server build/ -p ${PORT:-3000} -c 0",
+    "serve": "http-server build/ -p ${PORT:-3001} -c 0",
     "build": "./build.sh",
     "deploy": "yarn run build && push-dir --verbose --dir build --branch gh-pages --cleanup"
   },
@@ -25,6 +25,7 @@
     "uglifyjs": "^2.4.10"
   },
   "dependencies": {
-    "form-serialize": "^0.7.1"
+    "form-serialize": "^0.7.1",
+    "request": "^2.81.0"
   }
 }

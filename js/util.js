@@ -20,6 +20,12 @@ const createFormAlert = (alert) => {
         <strong>Heads up!</strong> ${alert.message}
       </div>
     `;
+  } else if (alert.status === 'warning') {
+    alertHtml = `
+      <div class="alert alert-warning">
+        <strong>Hmmmm...</strong> ${alert.message}
+      </div>
+    `;
   } else {
     alertHtml = `
       <div class="alert alert-danger">

@@ -1,4 +1,12 @@
+import request from 'request';
+
 import { createFormAlert } from './util';
+
+const requestOptions = {
+  uri: 'https://medalreyes-wedding-server.herokuapp.com/rsvp',
+  method: 'POST',
+  json: {}
+};
 
 const formIsComplete = (rsvpForm) => {
   return rsvpForm.hasOwnProperty('name') && rsvpForm.hasOwnProperty('attending');
@@ -41,8 +49,20 @@ const initRsvp = (rsvpForm) => {
     });
     return;
   }
-  addAttendeeFormElements([rsvpForm.name, 'John Cena']);
-  createFormAlert({'status': 'info', 'message': 'Now, simply select the guests you would like to RSVP for.'});
+
+  // Send RSVP initialization request
+  requestOptions.json = rsvpForm;
+  request(requestOptions, (err, res, body) => {
+    if (err) createFormAlert({ status: 'danger', message: err});
+    // The process inited if we received an 'info' status back
+    if (body.status === 'info') {
+      console.log(body);
+      addAttendeeFormElements(body.info.invitedGuests);
+      window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+    }
+    // Show message regardless (includes a non-attending RSVP)
+    createFormAlert(body);
+  });
 };
 
 const finalizeRsvp = (rsvpForm) => {
@@ -55,9 +75,10 @@ const finalizeRsvp = (rsvpForm) => {
     return;
   }
 
-  createFormAlert({
-    status: 'success',
-    message: 'You have officially RSVPed. See you on July 8th!'
+  requestOptions.json = rsvpForm;
+  request(requestOptions, (err, res, body) => {
+    if (err) createFormAlert({ status: 'danger', message: err});
+    createFormAlert(body);
   });
 };
 
