@@ -1,11 +1,14 @@
 import serialize from 'form-serialize';
 
 import { initRsvp, finalizeRsvp } from './rsvp';
-
+import { flipSubmitButtonState } from './util';
 
 // Intercept form submission and handle in JS
 const processRsvpForm = (e) => {
   if (e.preventDefault) e.preventDefault();
+
+  // Change button to reflect submission state
+  flipSubmitButtonState();
 
   const rsvpDetails = serialize(document.getElementById('rsvp-form'), { hash: true });
   rsvpDetails.attending = true ? rsvpDetails.attending === 'Yes' : false;

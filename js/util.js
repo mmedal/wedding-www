@@ -39,6 +39,19 @@ const createFormAlert = (alert) => {
   rsvpFormEntries.insertAdjacentHTML('afterbegin', alertHtml);
 };
 
+const flipSubmitButtonState = () => {
+  const btn = document.getElementById('rsvp-submit');
+  if (btn.disabled) {
+    btn.disabled = false;
+    btn.innerHTML = `Submit`;
+  } else {
+    btn.disabled = true;
+    btn.innerHTML = `Please wait...`;
+  }
+};
 
+const disableSubmitButton = () => {
+  document.getElementById('rsvp-submit').disabled = true;
+};
 
-module.exports = { createFormAlert };
+module.exports = { createFormAlert, flipSubmitButtonState, disableSubmitButton };

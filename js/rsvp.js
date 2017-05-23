@@ -1,6 +1,6 @@
 import request from 'request';
 
-import { createFormAlert } from './util';
+import { createFormAlert, flipSubmitButtonState, disableSubmitButton } from './util';
 
 const requestOptions = {
   uri: 'https://medalreyes-wedding-server.herokuapp.com/rsvp',
@@ -53,6 +53,7 @@ const initRsvp = (rsvpForm) => {
   // Send RSVP initialization request
   requestOptions.json = rsvpForm;
   request(requestOptions, (err, res, body) => {
+    flipSubmitButtonState();
     if (err) createFormAlert({ status: 'danger', message: err});
     // The process inited if we received an 'info' status back
     if (body.status === 'info') {
@@ -62,6 +63,10 @@ const initRsvp = (rsvpForm) => {
     }
     // Show message regardless (includes a non-attending RSVP)
     createFormAlert(body);
+    // Remove button if submission was successful
+    if (body.status === 'success') {
+      disableSubmitButton();
+    }
   });
 };
 
@@ -77,8 +82,13 @@ const finalizeRsvp = (rsvpForm) => {
 
   requestOptions.json = rsvpForm;
   request(requestOptions, (err, res, body) => {
+    flipSubmitButtonState();
     if (err) createFormAlert({ status: 'danger', message: err});
     createFormAlert(body);
+    // Remove button if submission was successful
+    if (body.status === 'success') {
+      disableSubmitButton();
+    }
   });
 };
 
