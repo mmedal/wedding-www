@@ -37,6 +37,7 @@ const createFormAlert = (alert) => {
   // Add elements to DOM
   const rsvpFormEntries = document.getElementById('rsvp-form-entries');
   rsvpFormEntries.insertAdjacentHTML('afterbegin', alertHtml);
+  flipSubmitButtonState();
 };
 
 const flipSubmitButtonState = () => {
