@@ -1,6 +1,6 @@
 import request from 'request';
 
-import { createFormAlert, flipSubmitButtonState, disableSubmitButton } from './util';
+import { createFormAlert, disableSubmitButton } from './util';
 
 const requestOptions = {
   uri: 'https://medalreyes-wedding-server.herokuapp.com/rsvp',
