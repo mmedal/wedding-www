@@ -41,6 +41,9 @@ const initRsvp = (rsvpForm) => {
     return;
   }
 
+  // change attending value to bool
+  rsvpForm.attending = rsvpForm.attending === 'Yes';
+
   // If RSVP has been initialized, throw error if attendees have not been provided
   if (document.getElementById('invitedGuests')) {
     createFormAlert({
@@ -79,6 +82,9 @@ const finalizeRsvp = (rsvpForm) => {
     });
     return;
   }
+
+  // change attending value to bool
+  rsvpForm.attending = rsvpForm.attending === 'Yes';
 
   requestOptions.json = rsvpForm;
   request(requestOptions, (err, res, body) => {

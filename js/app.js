@@ -11,7 +11,6 @@ const processRsvpForm = (e) => {
   flipSubmitButtonState();
 
   const rsvpDetails = serialize(document.getElementById('rsvp-form'), { hash: true });
-  rsvpDetails.attending = true ? rsvpDetails.attending === 'Yes' : false;
 
   // Check the RSVP stage based on whether attendees have been submitted
   if (rsvpDetails.hasOwnProperty('attendingGuests')) {
