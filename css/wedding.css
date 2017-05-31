@@ -336,11 +336,11 @@ h2.section-header:after {
   opacity: .8;
 }
 
-.candb {
+.reg-cb {
   width: 160px;
 }
 
-.amzn {
+.reg-a {
   width: 140px;
 }
 
@@ -520,7 +520,7 @@ h2.section-header:after {
     transform: translateY(0px);
   }
 
-  .amzn {
+  .reg-a {
     margin-top: 80px;
   }
 
@@ -537,7 +537,7 @@ h2.section-header:after {
     margin: -7px 20px 10px 20px;
   }
 
-  .candb {
+  .reg-cb {
     margin-top: 50px;
   }
 
